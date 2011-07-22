@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>632</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTextBrowser" name="mudOutput">
+      <property name="font">
+       <font>
+        <family>Courier,Nimbus Mono,monospace</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #000;
+color: #ccc;
+font-family: Courier,&quot;Nimbus Mono&quot;,monospace; </string>
+      </property>
+      <property name="textInteractionFlags">
+       <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="mudInput">
+      <property name="styleSheet">
+       <string notr="true">background-color: #000;
+color: #ccc;
+font-family: Courier,&quot;Nimbus Mono&quot;,monospace; </string>
+      </property>
+      <property name="placeholderText">
+       <string>Enter Mud commands here</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuV_iew">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <widget class="QMenu" name="menuTheme">
+     <property name="title">
+      <string>Theme</string>
+     </property>
+     <addaction name="actionLight"/>
+     <addaction name="actionDark"/>
+    </widget>
+    <addaction name="menuTheme"/>
+   </widget>
+   <addaction name="menuV_iew"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="Python_Console">
+   <property name="windowTitle">
+    <string>Python Console</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>&gt;&gt;&gt;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="consoleInput">
+       <property name="styleSheet">
+        <string notr="true">background-color: #000;
+color: #ccc;
+font-family: Courier,&quot;Nimbus Mono&quot;,monospace; </string>
+       </property>
+       <property name="placeholderText">
+        <string>Enter Python commands here</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="2">
+      <widget class="QTextBrowser" name="consoleOutput">
+       <property name="styleSheet">
+        <string notr="true">background-color: #000;
+color: #ccc;
+font-family: Courier,&quot;Nimbus Mono&quot;,monospace; </string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionLight">
+   <property name="text">
+    <string>Light</string>
+   </property>
+  </action>
+  <action name="actionDark">
+   <property name="text">
+    <string>Dark</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>mudInput</tabstop>
+  <tabstop>consoleInput</tabstop>
+  <tabstop>mudOutput</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

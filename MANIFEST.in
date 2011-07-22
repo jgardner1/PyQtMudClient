@@ -1,0 +1,2 @@
+include pyqtmud
+recursive-includea ui *
