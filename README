@@ -1,0 +1,25 @@
+This is an experimental MUD client. I wanted to build something like Mudlet,
+but base it on Pure python.
+
+I have the components to execute the Python commands in an eval block. I need
+to clean up the eval environment so that it will remember variables the user
+created and provide some useful default functions.
+
+I got stuck on the VT100 commands. At one point, I remember I had colors
+working. Adapting the QTextBrowser to a VT100 terminal is not easy. There were
+a couple of examples of people who actually did it, but it's not trivial.
+Mudlet is based on Qt but as far as I can tell, they implemented the main
+window on a QWidget, and took the time to write the draw functions by hand.
+
+I tried to find a way to embed Konsole using a KPart, but there weren't a lot
+of examples on the net.
+
+At this point, I think what I will do is create a basic text-based mud client,
+with commands that will create windows. That way, Konsole is the principle
+environment, and you can spawn windows that do things like show you the
+current room you are in, your inventory, or your map. Of course, then we have
+a basic Unix environment, where the main program just spawns subprocesses that
+it feeds data to.
+
+This is a current project that I'm still excited about (2011-07), and I am
+probably going to expand on this.
